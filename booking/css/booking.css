@@ -1,0 +1,396 @@
+/* CSS for jquery.fancyform.js */
+/* Control Holder */
+.controlHolder {
+  position: relative;
+}
+/* Messages */
+.error-message {
+  position: absolute;
+  top: 38px;
+  right: 2px;
+  font-weight: normal;
+  text-align: right;
+  width: 100%;
+  font-size: 10px;
+  line-height: 1em;
+  color: #6db5c9;
+  z-index: 10;
+}
+.success-message {
+  position: absolute;
+  bottom: -5px;
+  font-size: 13px;
+  text-align: left;
+  color: #6db5c9;
+  margin: 0px 0px;
+}
+/* input and textarea */
+.tmInput,
+.tmTextarea {
+  margin-bottom: 20px;
+}
+/* transformSelect CSS */
+/* 1st type of select */
+.tmSelect,
+.tmSelect2 {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin: 0px 0px 20px 0px;
+}
+.tmSelect li,
+.tmSelect2 li {
+  position: relative;
+  list-style: none;
+}
+.tmSelect span,
+.tmSelect2 span,
+.tmSelect input[type=text],
+.tmSelect2 input[type=text] {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  left: 0;
+  top: 0;
+  margin: 0;
+}
+.tmSelect:after,
+.tmSelect2:after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 25px;
+  height: 25px;
+  background: url(../img/search.png) center no-repeat;
+  z-index: -1;
+}
+.tmSelect li.open span,
+.tmSelect2 li.open span,
+.tmSelect li.open input[type=text],
+.tmSelect2 li.open input[type=text] {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.tmSelect input[type=text],
+.tmSelect2 input[type=text] {
+  width: 100%;
+}
+.tmSelect ul,
+.tmSelect2 ul {
+  position: absolute;
+  border: 1px solid #ececec;
+  border-top: 0;
+  width: 100%;
+  color: #535959;
+  margin: 0px 0px 0px 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-height: 210px;
+}
+.tmSelect ul span,
+.tmSelect2 ul span {
+  border: 0;
+  background: #ffffff;
+  padding: 3px 13px;
+}
+.tmSelect ul span:hover,
+.tmSelect2 ul span:hover {
+  background: #6db5c9;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.tmSelect ul li.group ul,
+.tmSelect2 ul li.group ul {
+  position: static;
+  border: 1px solid #e0e0e0;
+  border-right: 0;
+  border-left: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.tmSelect ul li.group span,
+.tmSelect2 ul li.group span {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  background: #eee;
+}
+.tmSelect ul li.group > span,
+.tmSelect2 ul li.group > span {
+  background: #eee;
+  border-top: 1px solid #dddddd;
+}
+.tmSelect ul li.group ul span,
+.tmSelect2 ul li.group ul span {
+  text-indent: 20px;
+  font-style: normal;
+}
+.tmSelect ul li.group ul span:hover,
+.tmSelect2 ul li.group ul span:hover {
+  background: #6db5c9;
+}
+.tmSelect ul li input[type=checkbox],
+.tmSelect2 ul li input[type=checkbox] {
+  position: relative;
+  top: 2px;
+  margin: 0 5px 0 0;
+  cursor: pointer;
+}
+/* 2nd type of select */
+.tmSelect2 {
+  width: 128px;
+  width: 100%;
+}
+.tmSelect2:after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 25px;
+  height: 25px;
+  background: url(../img/combo.png) center no-repeat;
+  z-index: -1;
+}
+.tmSelect2.auto {
+  cursor: pointer;
+  padding: 0;
+  margin: 0 0 20px 0;
+  font: 14.04px Arial, sans-serif;
+  line-height: 20px;
+  color: #535959;
+  height: 38px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.tmSelect2.auto span {
+  background: transparent;
+}
+.tmSelect2.auto ul {
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  background: #ffffff;
+}
+.tmSelect2.auto > li:first-child > span {
+  padding: 9px 12px;
+  width: 100%;
+  height: 38px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #ececec;
+}
+.tmSelect2 span,
+.tmSelect2 input[type=text],
+.tmSelect2.auto {
+  background-position: 137px center;
+}
+/* Radio */
+.trans-element-radio {
+  display: inline-block;
+  *display: block;
+  zoom: 1;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.image img,
+.trans-element-radio,
+.trans-element-checkbox,
+#tristate img {
+  padding: 5px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  vertical-align: middle;
+  margin: 0 0 5px;
+}
+.tmRadio {
+  padding-left: 0;
+}
+.tmRadio p {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.tmRadio img {
+  cursor: pointer;
+  margin: 0 5px 0 8px;
+}
+.tmRadio p {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.tmRadio input {
+  margin-right: 5px;
+}
+.tmRadio .unchecked,
+.tmRadio .checked {
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  margin: 0px 5px 0 8px;
+  top: 3px;
+  background: url(../img/radiobutton.png) center top no-repeat;
+}
+.tmRadio .checked {
+  background: url(../img/radiobutton.png) center bottom no-repeat;
+}
+/* Checkbox */
+.trans-element-checkbox {
+  display: inline-block;
+  *display: block;
+  zoom: 1;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+.trans-element-checkbox span {
+  padding-left: 40px;
+}
+.checkbox,
+.tmRadio {
+  margin-left: 0;
+  padding-left: 0;
+  margin: -1px 0 20px;
+  padding: 0;
+}
+.checkbox .name,
+.tmRadio .name {
+  position: relative;
+  display: inline-block;
+  margin: 0px 0px 0px 5px;
+}
+.tmCheckbox .name,
+.tmRadio .name {
+  font: 14.04px Arial, sans-serif;
+  line-height: 20px;
+  color: #535959;
+}
+.image img,
+.trans-element-radio,
+.trans-element-checkbox,
+#tristate img {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  padding: 0px;
+  margin-top: 3px;
+}
+.trans-element-checkbox.checked {
+  background: no-repeat url(../img/checkbox.png) center bottom;
+}
+.trans-element-checkbox.unchecked {
+  background: no-repeat url(../img/checkbox.png) center top;
+}
+/* Datepicker */
+.tmDatepicker {
+  position: relative;
+  margin-bottom: 20px;
+}
+.tmDatepicker:after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  right: 13px;
+  width: 16px;
+  height: 14px;
+  background: url(../img/calendar.png) center no-repeat;
+  z-index: -1;
+}
+.ui-datepicker {
+  padding: 10px;
+  background-color: #ffffff;
+  width: 200px;
+  border: 1px solid #ececec;
+  border-top: none;
+  font-size: 13px;
+}
+.ui-datepicker-prev,
+.ui-datepicker-next {
+  cursor: pointer;
+  float: left;
+}
+.ui-datepicker-next {
+  float: right;
+}
+.ui-datepicker-title {
+  text-align: center;
+}
+.ui-datepicker-calendar {
+  margin: 10px 0px;
+}
+.ui-datepicker-calendar td {
+  padding: 1px 7px;
+  text-align: center;
+}
+.ui-datepicker-calendar .ui-datepicker-current-day {
+  color: #ffffff;
+  background-color: #6db5c9;
+}
+.ui-datepicker-calendar .ui-datepicker-current-day a:hover {
+  text-decoration: none;
+}
+.ui-datepicker-calendar .ui-datepicker-today {
+  color: #ffffff;
+  background-color: #535959;
+}
+.ui-datepicker-calendar .ui-datepicker-today a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+.ui-datepicker-calendar .ui-state-active {
+  color: #ffffff;
+  background-color: #6db5c9;
+}
+button.ui-state-default {
+  color: #ffffff;
+  background-color: #6db5c9;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  padding: 3px 7px;
+}
+button.ui-state-default:hover {
+  color: #535959;
+}
+.ui-datepicker-close {
+  float: right;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

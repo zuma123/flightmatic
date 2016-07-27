@@ -1,0 +1,324 @@
+.controlHolder{
+	position: relative;
+}
+.error-message{
+	position: absolute;
+	top: 38px;
+	right: 2px;
+	font-weight: normal;
+	text-align: right;
+	width: 100%;
+	font-size: 10px;
+	line-height: 1em;
+	color: #6db5c9;
+	z-index: 10;
+}
+.success-message{
+	font-size: 13px;
+	text-align: left;
+	color: #6db5c9;
+	margin: 5px 0px;
+}
+/* input and textarea */
+.tmInput, .tmTextarea{
+	margin-bottom: 20px;
+}
+/* transformSelect CSS */
+/* 1st type of select */
+.tmSelect , .tmSelect2 {
+	clear	: both;
+	width   : 100%;
+	float: left;
+	margin: 0px 0px 20px 0px;
+
+	li{
+		position: relative;
+		list-style: none;
+	}
+	span, input[type=text] {
+		background-image: url(../img/search.png);
+		background-position: 240px center;
+		background-repeat: no-repeat;
+	    cursor: pointer;
+	    display: block;
+	    left: 0;
+	    margin: 0;
+	    top: 0;
+	}
+	li.open span, li.open input[type=text]{
+		border-radius: 0;
+		-webkit-border-radius: 0;
+	}
+	input[type=text]
+	{
+		width: 100%;
+	}
+	ul{
+		position: absolute;
+		border: 1px solid #ececec;
+		border-top: 0;
+		width: 100%;
+		color: #535959;
+		margin: 0px 0px 0px 0px;
+		.box-sizing(border-box);
+		max-height: 210px;
+		span {
+			border: 0;
+			background: #fff;
+			padding: 3px 13px;
+			&:hover{
+				background: #6db5c9;
+				.border-radius(0);
+			}
+		}
+		li{
+			&.group {
+				ul{
+					position: static;
+					border: 1px solid #e0e0e0;
+					border-right: 0;
+					border-left: 0;
+					.border-radius(0);
+				}
+				span
+				{
+					border-radius: 0;
+					-webkit-border-radius: 0;
+					background: #eee;
+				}
+				> span
+				{
+					background: #eee;
+					border-top: 1px solid #dddddd;
+				}
+				ul span
+				{
+					text-indent	: 20px;
+					font-style: normal;
+					&:hover{
+						background: #6db5c9;
+					}
+				}
+			}
+		}
+	}
+	ul li input[type=checkbox] {
+		position: relative;
+		top: 2px;
+		margin: 0 5px 0 0;
+		cursor: pointer;
+	}
+}
+/* 2nd type of select */
+.tmSelect2{
+	width: 128px;
+	span, input[type=text] {		
+		background-image: url(../img/combo.png);
+		background-position:  95px center;		
+	}
+	&.auto{
+		span {		
+			background: transparent;
+		}
+		padding: 0;
+		margin: 0 0 20px 0;
+		font: @fontSizeSmall @baseFont1;
+		line-height: 20px;
+		color: @black2;   
+		height: 38px;
+		.box-sizing(border-box);  
+		background-repeat: no-repeat;
+		background-image: url(../img/combo.png);
+		background-color: #fff; 
+		background-position:  95px center;
+		ul{
+			margin: 0px;
+			.box-sizing(border-box);
+			width: 100%;
+			background: #fff;
+		}		
+		>li{
+			&:first-child>span{
+				padding: 9px 12px;
+				.size(38px,100%);
+				.box-sizing(border-box);
+				border: 1px solid #ececec; 
+
+			}
+		}
+	} 
+	width: 100%;
+	span, input[type=text], &.auto {		
+		background-position:  137px center;		
+	}
+}
+
+/* Radio */
+.trans-element-radio
+{
+	display: inline-block;
+	*display: block;
+	zoom: 1;
+	.square(15px);
+	cursor: pointer;
+}
+.trans-element-radio.checked{
+	background: no-repeat url(../img/radiobutton_on.png) center;
+}
+.trans-element-radio.unchecked{
+	background: no-repeat url(../img/radiobutton_off.png) center;
+}
+.image img, .trans-element-radio, .trans-element-checkbox, #tristate img
+{
+	padding: 5px;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	vertical-align: middle;
+	margin: 0 0 5px;
+}
+.tmRadio{
+	padding-left: 0;
+	p{
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	img{
+		cursor: pointer;
+		margin: 0 5px 0 8px;
+	}
+	p{
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	input{
+		margin-right: 5px;
+	}
+	.unchecked, .checked{
+		position: relative;
+		display: inline-block;
+		.square(15px);
+		cursor: pointer;
+		margin: 0px 5px 0 8px;
+		top: 3px;
+		background: url(../img/radiobutton.png) center top no-repeat;
+	}
+	.checked{
+		background: url(../img/radiobutton.png) center bottom no-repeat;
+	}
+}
+/* Checkbox */
+.trans-element-checkbox{
+	display: inline-block;
+	*display: block;
+	zoom: 1;
+	width: 18px;
+	height: 18px;
+	cursor: pointer;
+	span{
+		padding-left: 40px;
+	}
+}
+.checkbox, .tmRadio{ 	 
+	margin-left: 0;
+	padding-left: 0;
+	margin: -1px 0 20px;
+	padding: 0;
+	.name{
+		position: relative;
+		display: inline-block;
+		margin: 0px 0px 0px 5px;
+	}
+}
+.tmCheckbox, .tmRadio{
+	.name{
+		font: @fontSizeSmall @baseFont1;
+		line-height: 20px;
+		color: @black2;
+	}
+}
+.image img, .trans-element-radio, .trans-element-checkbox, #tristate img{
+	.border-radius(0);
+	border: none;
+	padding: 0px; 
+	margin-top: 3px;
+}
+.trans-element-checkbox.checked
+{
+	background: no-repeat url(../img/checkbox.png) center bottom;
+}
+.trans-element-checkbox.unchecked
+{
+	background: no-repeat url(../img/checkbox.png) center top;
+}
+
+/* Datepicker */
+.tmDatepicker{
+	position: relative;
+	margin-bottom: 20px;
+	input{
+		background-image: url(../img/calendar.png);
+		background-position: 241px center;
+		background-repeat: no-repeat;
+	}
+}
+.ui-datepicker{
+	padding: 10px;
+	background-color: @white;
+	width: 200px;
+	border: 1px solid @borderColor;
+	border-top: none;
+	font-size: 13px;
+}
+.ui-datepicker-prev, .ui-datepicker-next{
+	cursor: pointer;
+	float: left;
+}
+.ui-datepicker-next{
+	float: right;
+}
+.ui-datepicker-title{
+	text-align: center;
+}
+.ui-datepicker-calendar{
+	margin: 10px 0px;
+	td{
+		padding: 1px 7px;
+		text-align: center;
+	}
+	.ui-datepicker-current-day{
+		color: @white;
+		background-color: @blue;
+		a:hover{
+			text-decoration: none;
+		}
+	}
+	.ui-datepicker-today{
+		color: @white;
+		background-color: @black2;
+		a:hover{
+			color: @white;
+			text-decoration: none;
+		}
+	}
+	.ui-state-active{
+		color: @white;
+		background-color: @blue;
+	}
+}
+button.ui-state-default{
+	color: @white;
+	background-color: @blue;
+	.border-radius(0);
+	border: none;
+	padding: 3px 7px;
+	&:hover{
+		color: @black2;
+	}
+}
+.ui-datepicker-close{
+	float: right;
+}
+
+@import "../../less/variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "../../less/mixins.less";
